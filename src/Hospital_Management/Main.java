@@ -24,12 +24,6 @@ interface staffInterface{
     void new_staff();
     void staff_info();
 }
-//class AuthenticationException extends Exception {
-//    public AuthenticationException(String message)
-//    {
-//        super(message);
-//    }
-//}
 
 public class Main {
     public static void main(String[] args) {
@@ -46,9 +40,9 @@ public class Main {
                 System.out.println("Welcome User !!!");
 
                 int count1 = 0, count2 = 0, count3 = 0, count4 = 0, count5 = 0, count6 = 0;
-                System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-                System.out.println("             Welcome to Hospital Management System Project in Java   ");
-                System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+               
+                System.out.println(" Welcome to Hospital Management System Project:");
+                
 
                 Doctor[] doctor=new Doctor[5];
                 Patient[] patient = new Patient[10];
@@ -86,15 +80,13 @@ public class Main {
                 int choice, j, c1, status = 1, s1 = 1, s2 = 1, s3 = 1, s4 = 1, s5 = 1, s6 = 1;
                 while (status == 1) {
                     System.out.println("\nMAIN MENU");
-                    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                   
                     System.out.println("1. Doctors \n2. Patients \n3. Medicines \n4. Laboratories \n5. Facilities \n6. Staff \n7. Exit");
-                    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                    System.out.println();
                     choice =sc.nextInt();
                     switch (choice) {
                         case 1: {
-                            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-                            System.out.println("                        DOCTOR SECTION");
-                            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                            System.out.println("DOCTOR SECTION");
                             s1 = 1;
                             while (s1 == 1) {
                                 System.out.println("1.Add New Entry\n2.Existing Doctors List");
@@ -106,9 +98,7 @@ public class Main {
                                         break;
                                     }
                                     case 2: {
-                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                                         System.out.println("id \t Name\t Specilialisation \t Room No.");
-                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                                         for (j = 0; j < count1; j++) {
                                             doctor[j].doctorInfo();
                                         }
@@ -121,9 +111,7 @@ public class Main {
                             break;
                         }
                         case 2: {
-                            System.out.println("--------------------------------------------------------------------------------");
-                            System.out.println("                     **PATIENT SECTION**");
-                            System.out.println("--------------------------------------------------------------------------------");
+                            System.out.println("**PATIENT SECTION**");
                             s2 = 1;
                             while (s2 == 1) {
                                 System.out.println("1.Add New Entry\n2.Existing Patients List");
@@ -135,9 +123,8 @@ public class Main {
                                         break;
                                     }
                                     case 2: {
-                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                                         System.out.println("id \t Name \t Disease \t Gender \t Admit Status \t Age");
-                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                                       
                                         for (j = 0; j < count2; j++) {
                                             patient[j].patient_info();
                                         }
@@ -151,9 +138,9 @@ public class Main {
                         }
                         case 3: {
                             s3 = 1;
-                            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-                            System.out.println("                         MEDICINE SECTION");
-                            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                        
+                            System.out.println("MEDICINE SECTION");
+                            
                             while (s3 == 1) {
                                 System.out.println("1.Add New Entry\n2. Existing Medicines List");
                                 c1 = sc.nextInt();
@@ -164,9 +151,9 @@ public class Main {
                                         break;
                                     }
                                     case 2: {
-                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                                       
                                         System.out.println("Name \t Company \t Expiry Date \t Cost");
-                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                                        
                                         for (j = 0; j < count3; j++) {
                                             medi[j].show_medi();
                                         }
@@ -180,9 +167,9 @@ public class Main {
                         }
                         case 4: {
                             s4 = 1;
-                            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-                            System.out.println("                      LABORATORY SECTION");
-                            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                            
+                            System.out.println("LABORATORY SECTION");
+                            
                             while (s4 == 1) {
                                 System.out.println("1.Add New Entry \n2.Existing Laboratories List");
                                 c1 = sc.nextInt();
@@ -193,9 +180,9 @@ public class Main {
                                         break;
                                     }
                                     case 2: {
-                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                                
                                         System.out.println("Facilities\t\t Cost");
-                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                                
                                         for (j = 0; j < count4; j++) {
                                             l[j].facility_list();
                                         }
@@ -209,9 +196,9 @@ public class Main {
                         }
                         case 5: {
                             s5 = 1;
-                            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                        
                             System.out.println("          HOSPITAL FACILITY SECTION");
-                            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                            
                             while (s5 == 1) {
                                 System.out.println("1.Add New Facility\n2.Existing Fecilities List");
                                 c1 = sc.nextInt();
@@ -222,9 +209,9 @@ public class Main {
                                         break;
                                     }
                                     case 2: {
-                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                    
                                         System.out.println("Hospital  Facility are:");
-                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                                       ;
                                         for (j = 0; j < count5; j++) {
                                             faci[j].show_faci();
                                         }
@@ -238,9 +225,9 @@ public class Main {
                         }
                         case 6: {
                             s6 = 1;
-                            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                           
                             System.out.println("                         STAFF SECTION");
-                            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                      
                             while (s6 == 1) {
                                 String a = "nurse", b = "worker", c = "security";
                                 System.out.println("1.Add New Entry \n2.Existing Nurses List\n3.Existing Workers List \n4.Existing Security List");
@@ -252,9 +239,9 @@ public class Main {
                                         break;
                                     }
                                     case 2: {
-                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                                        
                                         System.out.println("id \t Name \t Gender \t Salary");
-                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                                      
                                         for (j = 0; j < count6; j++) {
                                             if (a.equals(staff[j].desg))
                                                 staff[j].staff_info();
@@ -262,9 +249,9 @@ public class Main {
                                         break;
                                     }
                                     case 3: {
-                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                                        
                                         System.out.println("id \t Name \t Gender \t Salary");
-                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                        
                                         for (j = 0; j < count6; j++) {
                                             if (b.equals(staff[j].desg))
                                                 staff[j].staff_info();
@@ -272,9 +259,9 @@ public class Main {
                                         break;
                                     }
                                     case 4: {
-                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                                        
                                         System.out.println("id \t Name \t Gender \t Salary");
-                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                                 
                                         for (j = 0; j < count6; j++) {
                                             if (c.equals(staff[j].desg))
                                                 staff[j].staff_info();
